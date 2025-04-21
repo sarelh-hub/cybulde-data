@@ -46,5 +46,7 @@ COPY ./docker/scripts/* /
 RUN chown -R ${USER_NAME} /*.sh && chmod +x /*.sh
 USER ${USER_NAME}
 
+
+
 COPY . /app/
 CMD ["/startup-script.sh"]

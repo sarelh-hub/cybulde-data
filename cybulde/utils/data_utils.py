@@ -8,8 +8,9 @@ def is_dvc_initialized() -> bool:
     return (Path().cwd() / ".dvc").exists()
 
 def initialize_dvc() -> None:
-    DATA_UTILS_LOGGER.info("DVC is already initialized")
+    
     if is_dvc_initialized():
+        DATA_UTILS_LOGGER.info("DVC is already initialized")
         return
     
     DATA_UTILS_LOGGER.info("Initializing DVC")
